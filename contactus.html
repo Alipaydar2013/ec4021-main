@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contactus</title>
+    <style>
+        tr,th,td{
+            padding: 3px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <table border="2">
+    <tr>
+     <tr>NAME</tr>
+     <tr>EMAIL</tr>
+     <tr>DESCRIPTION</tr>
+     <tr>TIME</tr>
+     </tr>
+     {%for contact in contacts %}
+      <tr>
+        <td>{{ contact.fname }}</td>
+        <td>{{ contact.email }}</td>
+        <td>{{ contact.description }}</td>
+        <td>{{ contact.created_at }}</td>
+      </tr>
+     {% endfor %}
+  </table>  
+</body>
+</html>
